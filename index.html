@@ -5,100 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R_nwheels Site!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
             background-image: url('./img/fotoFundo.JPG'); /* Coloque o caminho da sua imagem aqui */
             background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .link-container {
-            display: flex; /* Exibe os links em linha */
-            justify-content: center; /* Centraliza os links */
-            align-items: center; /* Alinha os itens verticalmente ao centro */
-            flex-wrap: nowrap; /* Evita quebra de linha */
-        }
-        .link {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            width: 200px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Alinhamento à esquerda */
-            margin: 10px; /* Espaçamento entre os links */
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            padding: 0 10px; /* Adicionando um pouco de padding */
-        }
-        .link:hover {
-            background-color: rgba(255, 255, 255, 1);
-        }
-        .profile-pic {
-            width: 40px; /* Largura da imagem */
-            height: 40px; /* Altura da imagem */
-            border-radius: 50%; /* Faz a imagem ser redonda */
-            margin-right: 10px; /* Espaço entre a imagem e o texto */
-        }
-        .top-container {
-            display: flex; /* Exibe todos os links em linha */
-            align-items: center; /* Alinha verticalmente ao centro */
-            justify-content: center; /* Centraliza os links */
-            flex-wrap: nowrap; /* Evita quebra de linha */
+            background-attachment: fixed; /* Mantém a imagem de fundo fixa */
+            animation: moveBackground 10s linear infinite; /* Animação da imagem de fundo */
         }
 
-        /* Estilos para dispositivos móveis */
-        @media (max-width: 768px) {
-            .link-container {
-                flex-direction: column; /* Coloca os links em coluna */
-                align-items: center; /* Centraliza os links */
-            }
-            .link {
-                width: 90%; /* Largura do link em dispositivos móveis */
-                max-width: 300px; /* Limita a largura máxima */
-            }
-            .top-container {
-                flex-direction: column; /* Coloca o link do Instagram acima dos outros links */
-                align-items: center; /* Centraliza os itens */
-            }
+        @keyframes moveBackground {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
     </style>
 </head>
-<body>
+<body class="h-screen flex items-center justify-center">
 
-    <div class="top-container">
-        <a href="https://www.instagram.com/r_nwheels/" class="link" target="_blank">
-            <img src="./img/Rita.png" alt="Instagram" class="profile-pic"> Follow Me!
+    <div class="max-h-[80vh] overflow-y-auto bg-white bg-opacity-80 rounded-lg p-6 flex flex-col items-center">
+        <a href="https://www.instagram.com/r_nwheels/" class="flex items-center bg-white border border-gray-300 rounded-lg p-4 shadow hover:bg-opacity-100 mb-4" target="_blank">
+            <img src="./img/Rita.png" alt="Instagram" class="w-10 h-10 rounded-full mr-2"> Follow Me!
         </a>
-        
-        <div class="link-container">
-            <a href="https://smkhelmets.com/" class="link" target="_blank">
-                <img src="./logo/smk.png" alt="SMK Helmets" class="profile-pic">SMK Helmets
+        <br>
+        <div class="justify-center mb-4">
+            𝓡𝓲𝓽𝓪🏍️🌍
+          
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+            <a href="https://smkhelmets.com/" class="flex items-center bg-white border border-gray-300 rounded-lg p-4 shadow hover:bg-opacity-100" target="_blank">
+                <img src="./logo/smk.png" alt="SMK Helmets" class="w-10 h-10 rounded-full mr-2"> SMK Helmets
             </a>
-            <a href="https://motorvisor.pt/" class="link" target="_blank">
-                <img src="./logo/motoVisor.png" alt="Motorvisor" class="profile-pic">Motorvisor - RITA10
+            <a href="https://motorvisor.pt/" class="flex items-center bg-white border border-gray-300 rounded-lg p-4 shadow hover:bg-opacity-100" target="_blank">
+                <img src="./logo/motoVisor.png" alt="Motorvisor" class="w-10 h-10 rounded-full mr-2"> Motorvisor - RITA10
             </a>
-            <a href="https://www.sizzapp.com/" class="link" target="_blank">
-                <img src="./logo/sizz.png" alt="Sizzapp" class="profile-pic">Sizzapp - RITA15
+            <a href="https://www.sizzapp.com/" class="flex items-center bg-white border border-gray-300 rounded-lg p-4 shadow hover:bg-opacity-100" target="_blank">
+                <img src="./logo/sizz.png" alt="Sizzapp" class="w-10 h-10 rounded-full mr-2"> Sizzapp - RITA15
             </a>
-            <a href="https://via-go.pt/" class="link" target="_blank">
-                <img src="./logo/viaGo.png" alt="Via GO!" class="profile-pic">Via GO! - BIKERGIRL10
+            <a href="https://via-go.pt/" class="flex items-center bg-white border border-gray-300 rounded-lg p-4 shadow hover:bg-opacity-100" target="_blank">
+                <img src="./logo/viaGo.png" alt="Via GO!" class="w-10 h-10 rounded-full mr-2"> Via GO! - BIKERGIRL10
             </a>
-            <a href=" https://caparicapeles.pt/" class="link" target="_blank">
-                <img src="./logo/caparica.png" alt="Sizzapp" class="profile-pic">Caparica Peles - RITA10
+            <a href="https://caparicapeles.pt/" class="flex items-center bg-white border border-gray-300 rounded-lg p-4 shadow hover:bg-opacity-100" target="_blank">
+                <img src="./logo/caparica.png" alt="Caparica Peles" class="w-10 h-10 rounded-full mr-2"> Caparica Peles - RITA10
             </a>
-            <a href="https://setudizes.pt/" class="link" target="_blank">
-                <img src="./logo/seDizes.png" alt="Via GO!" class="profile-pic">Se tu Dizes - RITABIKER5STD
+            <a href="https://setudizes.pt/" class="flex items-center bg-white border border-gray-300 rounded-lg p-4 shadow hover:bg-opacity-100" target="_blank">
+                <img src="./logo/seDizes.png" alt="Se tu Dizes" class="w-10 h-10 rounded-full mr-2"> Se tu Dizes - RITABIKER5STD
             </a>
-           
         </div>
     </div>
 
